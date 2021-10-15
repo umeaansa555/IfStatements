@@ -29,15 +29,24 @@ namespace IfStatements
             number = Convert.ToInt32(inputBox.Text);
             if (number > 0)
                 outputLabel.Text = $"{number} is a positive number.";
+            else if(number == 0)
+            {
+                outputLabel.Text = $"{number} is a neutral integer.";
+            }
             else
             {
                 outputLabel.Text = $"{number} is a negative number.";
             }
 
-            if(number % 7 == 0)
+            if (number == 0)
+            {
+                sevenLabel.Text = $"{number} divided by 7 is {number}.";
+            }
+            else if(number % 7 == 0)
             {
                 sevenLabel.Text = $"{number} is evenly divisible by 7.";
             }
+            
             else
             {
                 sevenLabel.Text = $"{number} is not evenly divisible by 7.";
